@@ -34,7 +34,7 @@
         </events>
         <layout>
             <updates>
-                <inchoo_tickets module="Inchoo_Tickets">
+                <inchoo_tickets module="Inchoo_AutoSubscribe">
                     <file>inchoo_autosubscribe.xml</file>
                 </inchoo_tickets>
             </updates>
