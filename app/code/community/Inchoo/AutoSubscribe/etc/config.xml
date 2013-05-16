@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <modules>
+        <Inchoo_AutoSubscribe>
+            <version>0.0.1</version>
+        </Inchoo_AutoSubscribe>
+    </modules>
+    <global>
+        <helpers>
+            <inchoo_autosubscribe>
+                <class>Inchoo_AutoSubscribe_Helper</class>
+            </inchoo_autosubscribe>
+        </helpers>
+    </global>
+    <frontend>
+        <events>
+            <sales_order_place_after>
+		<observers>
+		    <inchoo_sales_order_place_after_newsletter>
+                        <class>Inchoo_AutoSubscribe_Model_Observer</class>
+                        <method>salesOrderPlaceAfter</method>
+                    </inchoo_sales_order_place_after_newsletter>                    
+		</observers>
+            </sales_order_place_after>
+            <customer_register_success>
+                <observers>
+                    <inchoo_customer_register_success>
+                        <class>Inchoo_AutoSubscribe_Model_Observer</class>
+                        <method>customerRegisterSuccess</method>
+                    </inchoo_customer_register_success>
+                </observers>  
+            </customer_register_success>                               
+        </events>
+        <layout>
+            <updates>
+                <inchoo_tickets module="Inchoo_Tickets">
+                    <file>inchoo_autosubscribe.xml</file>
+                </inchoo_tickets>
+            </updates>
+        </layout>        
+    </frontend>   
+</config>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout version="0.1.0">
+    
+    <customer_account_create>
+        <reference name="customer_form_register">
+            <action method="setTemplate">
+                <template>inchoo/autosubscribe/customer/form/register.phtml</template>
+            </action>
+        </reference>
+    </customer_account_create>
+    
+</layout>
