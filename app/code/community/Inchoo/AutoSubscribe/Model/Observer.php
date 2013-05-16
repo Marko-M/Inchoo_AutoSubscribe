@@ -56,7 +56,8 @@ class Inchoo_AutoSubscribe_Model_Observer extends Varien_Object
         Mage::log('_autoSubscribe: '.$email);
         
         $subscriber = Mage::getModel('newsletter/subscriber')->loadByEmail($email);
-        if($subscriber->getStatus() != Mage_Newsletter_Model_Subscriber::STATUS_SUBSCRIBED) {
+        if($subscriber->getStatus() != Mage_Newsletter_Model_Subscriber::STATUS_SUBSCRIBED &&
+                $subscriber->getStatus() != Mage_Newsletter_Model_Subscriber::STATUS_UNSUBSCRIBED) {
             $subscriber->setImportMode(true)->subscribe($email);
         }
     }    
