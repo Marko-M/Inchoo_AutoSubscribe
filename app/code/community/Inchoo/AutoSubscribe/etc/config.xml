@@ -17,18 +17,18 @@
         <events>
             <sales_order_place_after>
 		<observers>
-		    <inchoo_sales_order_place_after_newsletter>
+		    <inchoo_autosubscribe_sales_order_place_after>
                         <class>Inchoo_AutoSubscribe_Model_Observer</class>
                         <method>salesOrderPlaceAfter</method>
-                    </inchoo_sales_order_place_after_newsletter>                    
+                    </inchoo_autosubscribe_sales_order_place_after>                    
 		</observers>
             </sales_order_place_after>
             <customer_register_success>
                 <observers>
-                    <inchoo_customer_register_success>
+                    <inchoo_autosubscribe_customer_register_success>
                         <class>Inchoo_AutoSubscribe_Model_Observer</class>
                         <method>customerRegisterSuccess</method>
-                    </inchoo_customer_register_success>
+                    </inchoo_autosubscribe_customer_register_success>
                 </observers>  
             </customer_register_success>                               
         </events>
